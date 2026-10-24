@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 import streamlit as st
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = "https://pulseiq-backend-pb05.onrender.com"
 
 # ---------- Page setup ----------
 st.set_page_config(

@@ -16,8 +16,9 @@ def test_ask_endpoint_returns_total_revenue():
         "/ask",
         json={"question": "What is the total revenue?"},
     )
-
+    print("API response:", response.status_code, response.text)
     assert response.status_code == 200
+   
     data = response.json()
     assert data["success"] is True
     assert "answer" in data

@@ -142,18 +142,28 @@ def compare_months(month1, month2):
 
     revenue1 = revenue_by_month.get(month1, 0) or 0
     revenue2 = revenue_by_month.get(month2, 0) or 0
+
     change = revenue2 - revenue1
 
     percentage_change = (
         (change / revenue1 * 100)
         if revenue1 != 0 else None
     )
-
     return {
         "question_type": "compare_months",
         "answer": (
-            f"Revenue changed by {change:.2f} from {month1} "
-            f"to {month2}."
+            f"Revenue for {month1} was {revenue1:,.2f}, "
+            f"compared with {revenue2:,.2f} in {month2}. "
+            f"That is a {abs(change):,.2f} "
+            f"{'increase' if change >= 0 else 'decrease'} "
+            f"({abs(percentage_change):.2f}%)."
+            if percentage_change is not None
+            else (
+                f"Revenue for {month1} was {revenue1:,.2f}, "
+                f"compared with {revenue2:,.2f} in {month2}. "
+                "Percentage change cannot be calculated because "
+                "the starting month's revenue is zero."
+            )
         ),
         "metrics": {
             "month1": month1,

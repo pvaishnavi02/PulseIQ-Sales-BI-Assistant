@@ -1,3 +1,14 @@
+
+# 🚀 PulseIQ — Sales Intelligence Platform
+
+**[🌐 Try the Live Demo](https://pulseiq-sales-bi-assistant-ey9pytasplgrjmvewsyhhw.streamlit.app)**
+
+**[💻 GitHub Repository](https://github.com/pvaishnavi02/PulseIQ-Sales-BI-Assistant)**
+
+**[📚 Backend API Documentation](https://pulseiq-backend-pb05.onrender.com/docs)**
+
+---
+
 # Mini AI Business Intelligence Assistant
 
 A lightweight business intelligence application that answers natural-language questions about sales transactions. It combines a FastAPI backend, SQLite database, deterministic analytics, and an optional Groq-powered AI question classifier with a Streamlit dashboard.
